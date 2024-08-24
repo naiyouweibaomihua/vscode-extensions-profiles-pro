@@ -491,7 +491,7 @@ export async function initSyncProfile(ctx: vscode.ExtensionContext) {
 
 export async function uploadProfile(ctx: vscode.ExtensionContext) {
   //let input = JSON.stringify(ctx.globalState.get("profiles"));
-  let input = getGlobalStorageValue_sync("evald24.vscode-extension-profiles");
+  let input = getGlobalStorageValue_sync("naiyouweibaomihua.vscode-extension-profiles-pro");
   input.then(result => {
     uploadgist(result);
   });
@@ -523,13 +523,13 @@ export async function downloadProfile(ctx: vscode.ExtensionContext) {
       console.log(extensions);
       if (extensions.search("\"extensions\":") != -1) {
         //console.log("continue");
-        setGlobalStorageValue("evald24.vscode-extension-profiles", extensions);
+        setGlobalStorageValue("naiyouweibaomihua.vscode-extension-profiles-pro", extensions);
         //syncwriteFile(profile);
         //console.log(typeof result);
         //console.log(respData);
         //console.log("continue");
         console.log("continue");
-        vscode.window.showInformationMessage("Download successfully!");
+        vscode.window.showInformationMessage("Download successfully!Please restart VSCode");
       } else {
         vscode.window.showErrorMessage("Download failed!Please upload frist!");
       }

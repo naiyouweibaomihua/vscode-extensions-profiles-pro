@@ -1,7 +1,7 @@
 {
-  "name": "vscode-extension-profiles",
-  "displayName": "Extension profiles",
-  "version": "1.2.4",
+  "name": "vscode-extension-profiles-pro",
+  "displayName": "Extension profiles-pro",
+  "version": "1.0.1",
   "private": false,
   "description": "Lets you create profiles to include the selected extensions in the desired project.",
   "categories": [
@@ -17,15 +17,15 @@
   ],
   "repository": {
     "type": "git",
-    "url": "https://github.com/evald24/vscode-extension-profiles"
+    "url": "https://github.com/naiyouweibaomihua/vscode-extensions-profiles-pro"
   },
   "icon": "assets/icon.png",
   "license": "Apache-2.0",
   "author": {
-    "name": "Evald Smalyakov",
-    "url": "https://github.com/evald24"
+    "name": "naiyouweibaomihua",
+    "url": "https://github.com/naiyouweibaomihua"
   },
-  "publisher": "evald24",
+  "publisher": "naiyouweibaomihua",
   "main": "./out/extension.js",
   "scripts": {
     "version": "auto-changelog -p && git add CHANGELOG.md",

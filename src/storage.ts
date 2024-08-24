@@ -57,7 +57,6 @@ export async function setWorkspaceStorageValue(key: "enabled" | "disabled", exte
     filename: `${environment.WORKSPACE_STORAGE_PATH_UUID}state.vscdb`,
     driver: sqlite3.Database,
   });
-
   await db.run("INSERT OR REPLACE INTO ItemTable (key, value) VALUES (?, ?)", `extensionsIdentifiers/${key}`, JSON.stringify(extensions));
   return await db.close();
 }
@@ -79,6 +78,7 @@ export async function getGlobalStorageValue(key: StorageKey): Promise<ExtensionL
 }
 
 export async function getGlobalStorageValue_sync(key: string): Promise<string> {
+  //console.log(environment.WORKSPACE_STORAGE_PATH_UUID);
   const db = await open({
     filename: `${environment.GLOBAL_STORAGE_PATH}state.vscdb`,
     driver: sqlite3.Database,
