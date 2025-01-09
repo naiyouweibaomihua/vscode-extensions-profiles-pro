@@ -6,11 +6,15 @@ import { setGlobalStateValue, setWorkspaceStorageValue, getGlobalStorageValue_sy
 import { ExtensionList, ExtensionValue, ProfileList } from "./types";
 import { getAllExtensions, getExtensions, getPathToDocuments, getProfiles } from "./utils";
 import { initgist, uploadgist, getgist, syncwriteFile, findNestedProperty } from "./sync";
+import { environment } from "./utils";
 
 // Select and apply profile ...
 export async function applyProfile(ctx: vscode.ExtensionContext) {
   // Checking whether the workspace is open
   let folders = vscode.workspace.workspaceFolders;
+  
+  //console.log(environment.WORKSPACE_STORAGE_PATH_UUID);
+  
   if (folders === undefined) {
     return vscode.window.showErrorMessage("Working folder not found, open a folder an try again.");
   }
